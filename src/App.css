@@ -5,8 +5,14 @@
 --raisin-black: #211a1eff; */
 
 body {
-  background-color: white;
+  background-color:aliceblue;
+  /* color: #211a1eff; */
 }
+
+.container {
+  max-width: 1001px;
+}
+
 .header {
   margin-top: 35px;
   margin-bottom: 35px;
