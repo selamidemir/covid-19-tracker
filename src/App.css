@@ -1,38 +1,65 @@
-.App {
+/* --cyan-process: #5bc0ebff;
+--minion-yellow: #fde74cff;
+--android-green: #9bc53dff;
+--madder-lake: #c3423fff;
+--raisin-black: #211a1eff; */
+
+body {
+  background-color: white;
+}
+.header {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.content {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-box {
+  margin-top: 25px;
+  /* width: 1001px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active-card {
+  background-color: rgba(253, 232, 76, 0.637) !important;
+  width: 13rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.deaths-card {
+  background-color: rgba(195, 65, 63, 0.527) !important;
+  width: 13rem;
 }
 
-.App-link {
-  color: #61dafb;
+.recovered-card {
+  background-color: rgba(91, 192, 235, 0.486) !important;
+  width: 13rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.infected-card {
+  background-color: rgba(154, 197, 61, 0.493) !important;
+  width: 13rem;
+}
+
+.covid-graph {
+  margin-top: 25px;
+}
+
+.country-select {
+  text-align: center;
+}
+
+.country-select select {
+  /* background-color:azure; */
+}
+
+.footer {
+  margin-top: 25px;
+  margin: 15px;
+  text-align: center;
+  font-size: 21px;
+  font-family: Roboto;
 }

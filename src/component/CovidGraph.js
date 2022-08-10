@@ -2,7 +2,7 @@ import React from 'react';
 
 function CovidGraph() {
   return (
-    <div>CovidGraph</div>
+    <div className='covid-graph'>CovidGraph</div>
   )
 }
 
