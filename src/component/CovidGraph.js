@@ -10,11 +10,14 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
-import { selectCountry, selectGraphData } from '../redux/covid19Slice';
+import { selectCountry, selectGraphData, selectIsLoading, selectLastUpdate } from '../redux/covid19Slice';
 
 function CovidGraph() {
   const covid19Data = useSelector(selectGraphData);
   const country = useSelector(selectCountry);
+  const lastUpdate = useSelector(selectLastUpdate);
+  const isLoading = useSelector(selectIsLoading);
+
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -43,16 +46,18 @@ function CovidGraph() {
     labels,
     datasets: [
       {
-        label: 'Dataset 1',
+        label: `Last Update ${lastUpdate}`,
         data: covid19Data,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
     ],
   };
-  
+
   return (
-    <div className='covid-graph'><Bar options={options} data={data} /></div>
+    <>
+      {!isLoading && <div className='covid-graph'><Bar options={options} data={data} /></div>}
+    </>
   )
 }
 

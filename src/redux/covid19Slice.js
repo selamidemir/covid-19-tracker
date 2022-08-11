@@ -15,9 +15,8 @@ export const covid19Slice = createSlice({
         recovered: 0,
         active: 'Unknown',
         deaths: 0,
-        country: { "name": "Global", "iso2": null, "iso3": null},
+        country: { "name": "Global", "iso2": null, "iso3": null,},
         lastUpdated: '',
-        graph: null,
         isLoading: false,
         error: null,
     },
@@ -37,6 +36,10 @@ export const covid19Slice = createSlice({
             state.recovered = action.payload.confirmed.value - action.payload.deaths.value;
             state.deaths = action.payload.deaths.value;
             state.lastUpdate = action.payload.lastUpdate;
+        },
+        [getCovid19Data.rejected]: (state, action) =>{
+            state.isLoading = false;
+            state.error = action.error.message;
         }
     }
 });
@@ -46,6 +49,8 @@ export const selectRecovered = state => state.covid19.recovered;
 export const selectActive = state => state.covid19.active;
 export const selectDeaths = state => state.covid19.deaths;
 export const selectCountry = state => state.covid19.country;
+export const selectIsLoading = state => state.covid19.isLoading;
+export const selectError = state => state.covid19.error;
 export const selectGraphData = state => [
     state.covid19.infected,
     state.covid19.recovered, 
