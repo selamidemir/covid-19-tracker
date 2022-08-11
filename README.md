@@ -11,3 +11,12 @@
     countryDetail":{"pattern":"https://covid19.mathdro.id/api/countries/[country]",
         "example":"https://covid19.mathdro.id/api/countries/USA"},
     "lastUpdate":"2022-08-10T12:21:46.000Z"}
+
+    {
+        "confirmed":{"value":92562177,
+                    "detail":"https://covid19.mathdro.id/api/countries/USA/confirmed"},
+        "recovered":{"value":0,
+                    "detail":"https://covid19.mathdro.id/api/countries/USA/recovered"},
+        "deaths":{"value":1035549,
+                "detail":"https://covid19.mathdro.id/api/countries/USA/deaths"},
+        "lastUpdate":"2022-08-11T06:21:00.000Z"}
