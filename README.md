@@ -1,22 +1,15 @@
-{
-    "confirmed":{"value":586568374,"detail":"https://covid19.mathdro.id/api/confirmed"},
-    "recovered":{"value":0,"detail":"https://covid19.mathdro.id/api/recovered"},
-    "deaths":{"value":6424163,"detail":"https://covid19.mathdro.id/api/deaths"},
-    "dailySummary":"https://covid19.mathdro.id/api/daily",
-    "dailyTimeSeries":{"pattern":"https://covid19.mathdro.id/api/daily/[dateString]", 
-        "example":"https://covid19.mathdro.id/api/daily/2-14-2020"},
-        image":"https://covid19.mathdro.id/api/og",
-    "source":"https://github.com/mathdroid/covid19",
-    "countries":"https://covid19.mathdro.id/api/countries","
-    countryDetail":{"pattern":"https://covid19.mathdro.id/api/countries/[country]",
-        "example":"https://covid19.mathdro.id/api/countries/USA"},
-    "lastUpdate":"2022-08-10T12:21:46.000Z"}
+# Covid 19 Tracker
 
-    {
-        "confirmed":{"value":92562177,
-                    "detail":"https://covid19.mathdro.id/api/countries/USA/confirmed"},
-        "recovered":{"value":0,
-                    "detail":"https://covid19.mathdro.id/api/countries/USA/recovered"},
-        "deaths":{"value":1035549,
-                "detail":"https://covid19.mathdro.id/api/countries/USA/deaths"},
-        "lastUpdate":"2022-08-11T06:21:00.000Z"}
+Covid 19 vakıa sayılarını ve sonuçlarını ülke ve global bazda göstren bu uygulama React ve Redux kullanılarak geliştirilmiştir. 
+
+Bilgiler [https://covid19.mathdro.id/api](https://covid19.mathdro.id/api) adresinden çekilmektedir.
+
+Uygulamayı çalıştırıldığında bu adresten bilgi alınmaktadır. Bu adresin **.env** doysasına
+
+```
+REACT_APP_API_END_POINT=https://covid19.mathdro.id/api
+```
+
+şeklinde eklenmesi gerekmektedir.
+
+
