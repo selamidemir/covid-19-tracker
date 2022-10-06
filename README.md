@@ -12,4 +12,4 @@ REACT_APP_API_END_POINT=https://covid19.mathdro.id/api
 
 şeklinde eklenmesi gerekmektedir.
 
-
+Demo
